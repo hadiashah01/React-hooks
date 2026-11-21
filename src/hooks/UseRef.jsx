@@ -31,7 +31,7 @@ export default function PreventRendering() {
       <br />
       //taking reference of dom elements
       <input type="text" ref={inp} />
-      <button onClick={btnclicked}>change Color</button>
+      <button onClick={btnclicked}>change Border</button>
       <br />
     </>
   );
