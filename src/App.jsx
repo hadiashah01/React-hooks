@@ -11,6 +11,9 @@ function App() {
   function inc() {
     setCount(count + 1);
   }
+  function inc5() {
+    setCount((prev) => prev + 5);
+  }
   function dec() {
     setCount(count - 1);
   }
@@ -18,12 +21,13 @@ function App() {
     setBrand({ name: "Buggati", year: 2027, color: "black" });
   }
   function changeColor() {
-    setBrand({ ...brand, color: "black" });
+    setBrand({ ...brand, color: "green" });
   }
   return (
     <>
       <h1>{count}</h1>
       <button onClick={() => inc()}>Increase</button> <br />
+      <button onClick={() => inc5()}>Increase by 5</button> <br />
       <button onClick={() => dec()}>Decrease</button>
       <br />
       <br />
