@@ -3,7 +3,7 @@ export default function MemoizedFun() {
   const [numb, setNum] = useState(0);
   const [count, setCount] = useState(0);
   function calcCube(num) {
-    console.log("hi i wsas heree");
+    console.log("hi i was here from useMemo hook in calcCube function");
 
     return Math.pow(num, 3);
   }

@@ -1,4 +1,5 @@
 import "./App.css";
+import CallBackedFun from "./hooks/UseCallback";
 import CountRendering from "./hooks/UseEffectHook";
 import MemoizedFun from "./hooks/UseMemo";
 import PreventRendering from "./hooks/UseRef";
@@ -11,6 +12,7 @@ function App() {
       <CountRendering />
       <PreventRendering />
       <MemoizedFun/>
+      <CallBackedFun/>
     </>
   );
 }
