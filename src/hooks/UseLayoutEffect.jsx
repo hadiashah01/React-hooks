@@ -10,6 +10,11 @@ export default function TestPrint() {
   return (
     <>
       <h2>THIS IS USE LAYOUT EFFECT HOOK HERE </h2> <br /> <br />
+      {Array(3000)
+        .fill(" ")
+        .map((elem,idx) => (
+          <li key={idx} > {Math.pow(Math.random(), 10)}</li>
+        ))}
     </>
   );
 }
