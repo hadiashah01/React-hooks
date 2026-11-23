@@ -9,6 +9,7 @@ import PreventRendering from "./hooks/UseRef";
 import UpdateStates from "./hooks/UseStateHook";
 
 function App() {
+  const [Name, setName] = LocalStorageHook("username", " ");
   return (
     <>
       <UpdateStates />
@@ -18,7 +19,17 @@ function App() {
       <CallBackedFun />
       <ReducerFN />
       <TestPrint />
-      <LocalStorageHook/>
+      <>
+        <input
+          type="text"
+          value={Name}
+          onChange={(e) => {
+            setName(e.target.value);
+          }}
+        />{" "}
+        <br /> <br /> <h3>Welcome {Name}</h3>
+        <br /> <br />{" "}
+      </>
     </>
   );
 }

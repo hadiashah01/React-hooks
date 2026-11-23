@@ -1,22 +1,10 @@
 import { useEffect, useState } from "react";
-export default function LocalStorageHook() {
+export default function LocalStorageHook(key, initialVal) {
   const [fullName, setName] = useState(
-    localStorage.getItem("username") ? localStorage.getItem("username") : " ",
+    localStorage.getItem(key) ? localStorage.getItem(key) : initialVal,
   );
   useEffect(() => {
-    localStorage.setItem("username", fullName);
+    localStorage.setItem(key, fullName);
   }, [fullName]);
-  return (
-    <>
-      <input
-        type="text"
-        value={fullName}
-        onChange={(e) => {
-          setName(e.target.value);
-        }}
-      />{" "}
-      <br /> <br /> <h3>Welcome {fullName}</h3>
-      <br /> <br />{" "}
-    </>
-  );
+  return [fullName, setName];
 }
