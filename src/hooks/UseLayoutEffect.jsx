@@ -9,12 +9,13 @@ export default function TestPrint() {
 
   return (
     <>
-      <h2>THIS IS USE LAYOUT EFFECT HOOK HERE </h2> <br /> <br />
-      {Array(3000)
+      <h2>THIS IS USE LAYOUT EFFECT HOOK HERE </h2> <br />
+      {Array(10)
         .fill(" ")
-        .map((elem,idx) => (
-          <li key={idx} > {Math.pow(Math.random(), 10)}</li>
-        ))}
+        .map((elem, idx) => (
+          <li key={idx}> {Math.floor(Math.pow(Math.random() + 10, 10))}</li>
+        ))}{" "}
+      <br /> <br />
     </>
   );
 }
